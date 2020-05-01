@@ -1,0 +1,31 @@
+{{- define "page.tmpl" -}}
+<!DOCTYPE html>
+<html>
+<head>
+  {{ with .title -}}<title>{{- . -}}</title>{{- end}}
+  <link href="css/site.css" rel="stylesheet" />
+  <link href="css/tables.css" rel="stylesheet" />
+  <link href="css/prettify.css" rel="stylesheet" />
+</head>
+<body>
+  {{ with .header -}}<header>{{- . -}}</header>{{- end }}
+  {{ with .nav -}}<nav>{{- . -}}</nav>{{- end }}
+  {{ with .content -}}<section>{{- . -}}</section>{{- end }}
+  {{ with .footer -}}<footer>{{- . -}}</footer>{{- end }}
+</body>
+<!-- START: PrettyFi from https://github.com/google/code-prettify -->
+<script>
+/* We want to add the class "prettyprint" to all the pre elements */
+var pre_list = document.querySelectorAll("pre");
+
+pre_list.forEach(function(elem) {
+    elem.classList.add("prettyprint");
+    /* elem.classList.add("linenums:1");*/
+    elem.classList.add("linenums:1");
+});
+</script>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<!--  END: PrettyFi from https://github.com/google/code-prettify -->
+</html>
+{{- end -}}
+

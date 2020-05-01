@@ -1,0 +1,32 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "description": "An Oberon-7 module for formatting INTEGER and REAL values as strings. It is designed to work with Karl Landstrom's OBNC compiler.",
+    "name": "Fmt",
+    "codeRepository": "https://github.com/rsdoiel/fmt",
+    "issueTracker": "https://github.com/rsdoiel/fmt/issues",
+    "license": "https://opensource.org/licenses/BSD-3-Clause",
+    "version": "0.0.0",
+    "author": [
+        {
+            "@type": "Person",
+            "givenName": "Robert",
+            "familyName": "Doiel",
+            "email": "rsdoiel@gmail.com",
+            "@id": "https://orcid.org/0000-0003-0900-6903"
+        }
+    ],
+    "developmentStatus": "concept",
+    "downloadUrl": "https://github.com/rsdoiel/fmt/releases",
+    "keywords": [
+        "Oberon",
+        "Oberon-7",
+        "OBNC",
+        "module"
+    ],
+    "maintainer": "https://orcid.org/0000-0003-0900-6903",
+    "programmingLanguage": [
+        "Oberon",
+        "Obeorn-7"
+    ]
+}
