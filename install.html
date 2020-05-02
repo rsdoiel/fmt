@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <link href="css/site.css" rel="stylesheet" />
+  <link href="css/tables.css" rel="stylesheet" />
+  <link href="css/prettify.css" rel="stylesheet" />
+</head>
+<body>
+  
+  <nav><ul>
+<li><a href="/">HOME</a></li>
+<li><a href="./">README</a></li>
+<li><a href="./license.html">LICENSE</a></li>
+<li><a href="obncdoc/index.html">OBNC Docs</a></li>
+<li><a href="https://github.com/rsdoiel/Fmt">GitHub</a></li>
+</ul>
+</nav>
+  <section><h1>Fmt</h1>
+
+<p>An experimental Oberon-7 module to provide formatting
+procedures for INTEGER and REAL values inspired by Karl
+Landström&rsquo;s OBNC oberon compiler and his extension library.</p>
+
+<h2>Installation</h2>
+
+<h3>Prerequisite</h3>
+
+<p>This repository assumes you have installed Karl Landström&rsquo;s
+<a href="https://miasap.se/obnc/">OBNC</a> compiler v0.16.1 or better.
+It assumes you have a working C tool chain configured (e.g.
+clang, gcc, make). If you can compile and install Karl&rsquo;s extenions
+modules <a href="https://miasap.se/obnc/downloads/obnc-libext_0.7.0.tar.gz">obnc-libext-0.7.0.tar.gz</a> then you should be able to install this
+package.</p>
+
+<h3>Setup</h3>
+
+<p>The installation process was inspired by Karl&rsquo;s scripts for
+<code>https://miasap.se/obnc/downloads/obnc-libext_0.7.0.tar.gz</code>
+and mirrors that process and most of those assumptions.</p>
+
+<p>The basic process is</p>
+
+<ol>
+<li>build</li>
+<li>test</li>
+<li>install</li>
+</ol>
+
+<p>In the shell I do</p>
+
+<pre><code class="language-bash">    ./build.bash &amp;&amp; ./test.bash &amp;&amp; ./install.bash
+</code></pre>
+
+<p>By default modules are installed relative to your home
+directory but if you want to install them in a system
+directory for other users (e.g. <code>/usr/local</code>) then try</p>
+
+<pre><code class="language-bash">    ./build.bash &amp;&amp; ./test.bash &amp;&amp; ./install.bash --prefix=/usr/local
+</code></pre>
+</section>
+  
+</body>
+<!-- START: PrettyFi from https://github.com/google/code-prettify -->
+<script>
+/* We want to add the class "prettyprint" to all the pre elements */
+var pre_list = document.querySelectorAll("pre");
+
+pre_list.forEach(function(elem) {
+    elem.classList.add("prettyprint");
+    /* elem.classList.add("linenums:1");*/
+    elem.classList.add("linenums:1");
+});
+</script>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<!--  END: PrettyFi from https://github.com/google/code-prettify -->
+</html>

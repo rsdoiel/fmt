@@ -1,0 +1,15 @@
+DEFINITION Fmt;
+  CONST
+    Version = "v0.0.0";
+
+(*Procedure for getting the epoch time value *)
+
+	PROCEDURE Int(value : INTEGER; fmt: ARRAY OF CHAR; VAR dest : ARRAY OF CHAR);
+(*Int*() takes a value (INTEGER), a format string (ARRAY OF CHAR) and updates dest (ARRAY OF CHAR)
+using C's sprintf function. *)
+
+	PROCEDURE Real(value : REAL; fmt: ARRAY OF CHAR; VAR dest : ARRAY OF CHAR);
+(*Int*() takes a value (REAL), a format string (ARRAY OF CHAR) and updates dest (ARRAY OF CHAR)
+using C's sprintf function. *)
+
+END Fmt.

@@ -1,5 +1,5 @@
 MODULE FmtTest;
-  IMPORT Out, Fmt := Fmt;
+  IMPORT Out, Fmt;
 
 PROCEDURE TestInt(): BOOLEAN;
   VAR
@@ -20,8 +20,8 @@ PROCEDURE TestReal(): BOOLEAN;
     dest : ARRAY 128 OF CHAR;
     r : REAL;
 BEGIN
-    r := 42.0;
-    fmtString := "%d";
+    r := 3.145;
+    fmtString := "%f";
     Fmt.Real(r, fmtString, dest);
     Out.String(dest);Out.Ln;
     RETURN TRUE

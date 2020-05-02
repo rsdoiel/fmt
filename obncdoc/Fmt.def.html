@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
+	<head>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+		<title>DEFINITION Fmt</title>
+		<link rel='stylesheet' type='text/css' href='style.css' />
+	</head>
+	<body>
+		<p><a href='index.html'>Index</a></p>
+
+		<pre>
+DEFINITION <em>Fmt</em>;
+  CONST
+    Version = <span class='string'>"v0.0.0"</span>;
+
+<span class='comment'>(*Procedure for getting the epoch time value *)</span>
+
+	PROCEDURE <em>Int</em>(value : INTEGER; fmt: ARRAY OF CHAR; VAR dest : ARRAY OF CHAR);
+<span class='comment'>(*Int*() takes a value (INTEGER), a format string (ARRAY OF CHAR) and updates dest (ARRAY OF CHAR)
+using C's sprintf function. *)</span>
+
+	PROCEDURE <em>Real</em>(value : REAL; fmt: ARRAY OF CHAR; VAR dest : ARRAY OF CHAR);
+<span class='comment'>(*Int*() takes a value (REAL), a format string (ARRAY OF CHAR) and updates dest (ARRAY OF CHAR)
+using C's sprintf function. *)</span>
+
+END Fmt.
+</pre>
+	</body>
+</html>

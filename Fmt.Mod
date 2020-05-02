@@ -1,18 +1,56 @@
-(**Fmt.Mod provides a simple wrapper for formatting Oberon INTEGER and REAL values
-when compiling using the OBNC compiler.
- *)
+(*Copyright (C) 2020, R. S. Doiel <rsdoiel@gmail.com>
+Fmt.Mod implements a simple integer and real value formatting
+using C's sprintf function and a format string.
+
+BSD 3-Clause License
+
+Copyright (c) 2020, R. S. Doiel
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*)
+
 MODULE Fmt;
+  CONST
+    Version* = "v0.0.0";
 
-(*implemented in C *)
+(**Procedure for getting the epoch time value *)
 
-PROCEDURE Int*(value : INTEGER; fmtString : ARRAY OF CHAR; VAR dest : ARRAY OF CHAR);
+(*implemented in C*)
+
+	PROCEDURE Int*(value : INTEGER; fmt: ARRAY OF CHAR; VAR dest : ARRAY OF CHAR);
+(**Int*() takes a value (INTEGER), a format string (ARRAY OF CHAR) and updates dest (ARRAY OF CHAR)
+using C's sprintf function. *)
+	END Int;
+
+	PROCEDURE Real*(value : REAL; fmt: ARRAY OF CHAR; VAR dest : ARRAY OF CHAR);
+(**Int*() takes a value (REAL), a format string (ARRAY OF CHAR) and updates dest (ARRAY OF CHAR)
+using C's sprintf function. *)
+	END Real;
+
 BEGIN
-(**Implementation is written in C in Fmt.c. *)
-END Int;
-
-PROCEDURE Real*(value : REAL; fmtString : ARRAY OF CHAR; VAR dest : ARRAY OF CHAR);
-BEGIN
-(**Implementation is written in C in Fmt.c. *)
-END Real;
-
 END Fmt.
