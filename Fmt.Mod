@@ -1,4 +1,5 @@
-(*Copyright (C) 2020, R. S. Doiel <rsdoiel@gmail.com>
+(**
+Copyright (C) 2020, R. S. Doiel <rsdoiel@gmail.com>
 Fmt.Mod implements a simple integer and real value formatting
 using C's sprintf function and a format string.
 
@@ -33,7 +34,6 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 *)
-
 MODULE Fmt;
   CONST
     Version* = "v0.0.0";
