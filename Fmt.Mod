@@ -35,10 +35,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 *)
 MODULE Fmt;
-  CONST
-    Version* = "v0.0.0";
-
-(**Procedure for getting the epoch time value *)
 
 (*implemented in C*)
 

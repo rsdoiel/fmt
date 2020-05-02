@@ -23,4 +23,4 @@ for file in *Test.Mod; do
 	fi
 done
 
-printf "\nSuccess!\n\n"
+printf "\nAll tests passed.\n\n"
